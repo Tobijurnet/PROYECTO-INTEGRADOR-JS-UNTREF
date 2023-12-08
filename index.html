@@ -24,8 +24,9 @@
                     <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
                 </ul>
+                <button class="btn-cart"><a href="./cart.html"></a> Cart</button>
                 <div class="navbar-toggler" onclick="toggleNavbar()">
-                    <span class="navbar-toggler-icon"></span>
+                    <img class="toggler" src="./multimedia/images/menu.png" alt="">
                 </div>
             </div>
         </nav>
@@ -35,5 +36,16 @@
         <div id="cardContainer"></div>
     </main>
 
+<script>
+function toggleNavbar() {
+    const navbarNav = document.querySelector(".navbar-nav");
+    navbarNav.style.display === "none"
+        ? (navbarNav.style.display = "flex")
+        : (navbarNav.style.display = "none");
+}
+
+
+
+</script>
 </body>
 </html>

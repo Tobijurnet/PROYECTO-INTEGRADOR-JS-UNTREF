@@ -1,12 +1,8 @@
-fetch('./products.json')
-    .then(response => {
-        console.log(response)
-        if (response.status === 200 && response.ok === true) {
-            return response.json()
-        }
-    })
-    .then(data => {
-        createCard(data.cardContainer),
-        cardEvent();
-    })
-    .catch(err => console.log(err));
+let item = new URLSearchParams(window.location.search).get('cardContainer')
+console.log(item);
+
+const URL_base = 'https://fakestoreapi.com/products'
+
+fetch(`${URL_base}`)
+    .then(response => response.json())
+    .then(data => console.log(data))

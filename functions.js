@@ -58,6 +58,20 @@ export function createCard(array){
     });
 }
 
+export function cardEvent() {
+    const cards = document.querySelectorAll('.card')
+    console.log(cards);
+    cards.forEach(card => {
+        card.addEventListener('click', async () =>{
+            console.log('hiciste click');
+            const response = await fetch('https://fakestoreapi.com/products')
+            const data = await response.json
+            console.log(data)
+        })
+    })
+}
+
+
 export function toggleNavbar() {
     const navbarNav = document.querySelector(".navbar-nav");
     navbarNav.style.display === "none"
@@ -66,14 +80,4 @@ export function toggleNavbar() {
 }
 
 
-export function cardEvent() {
-    const cards = document.querySelectorAll('.card');
-
-    cards.forEach(card =>{
-        cards.addEventListener('click', () => {
-            console.log('hiciste click');
-
-    })
-    });
-}
 
